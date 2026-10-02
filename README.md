@@ -2,6 +2,8 @@
 
 An exact probability calculator and multi-banner planner for gacha games, starting with Wuthering Waves and Zenless Zone Zero.
 
+![CI](https://github.com/breibachjulian-tech/WuWa-ZZZ-pull-tracker/actions/workflows/ci.yml/badge.svg)
+
 ## The problem
 
 Most pity calculators answer one question: "what are my odds on this banner?" Real planning is harder. You have limited pulls, several banners coming up, free-pull income each version, and a guarantee state that carries over between banners. Pull Planner answers questions like:
@@ -28,7 +30,7 @@ TypeScript (strict), pnpm workspace, Vitest, fast-check, GitHub Actions
 ## Roadmap
 
 - [x] M0: Repo, workspace, license
-- [ ] M0: Strict TypeScript, lint, tests, CI
+- [x] M0: Strict TypeScript, lint, tests, CI
 - [ ] M1: Exact engine for a single banner
 - [ ] M2: Monte Carlo simulation and cross-validation against the exact result
 - [ ] M3: Second banner config, with no engine changes

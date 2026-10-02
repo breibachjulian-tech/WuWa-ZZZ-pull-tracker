@@ -1,0 +1,6 @@
+{
+  "name": "pull-planner",
+  "private": true,
+  "packageManager": "pnpm@12.8.1",
+  "license": "MIT"
+}

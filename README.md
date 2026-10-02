@@ -20,10 +20,10 @@ Most pity calculators answer one question: "what are my odds on this banner?" Re
 
 TypeScript (strict), pnpm workspace, Vitest, fast-check, GitHub Actions
 
-| Package | Description |
-| --- | --- |
+| Package           | Description                                                       |
+| ----------------- | ----------------------------------------------------------------- |
 | `packages/engine` | Pure TypeScript probability engine with zero runtime dependencies |
-| `apps/web` | Web UI |
+| `apps/web`        | Web UI                                                            |
 
 ## Roadmap
 

@@ -1,5 +1,6 @@
 {
-  "name": "engine",
+  "name": "@pullplanner/engine",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +9,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "12.8.1",
-      "onFail": "download"
-    }
-  },
-  "packageManager": "pnpm@12.8.1",
+  "license": "MIT",
   "type": "module"
 }

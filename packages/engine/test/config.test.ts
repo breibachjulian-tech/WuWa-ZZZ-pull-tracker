@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { fiveStarRate, type BannerConfig } from "../src/config";
+import {
+  featuredWinChance,
+  guaranteeAfterFiveStar,
+  fiveStarRate,
+  type BannerConfig,
+} from "../src/config";
 
 // Synthetic numbers for testing the maths. Not real game rates.
 const config: BannerConfig = {
@@ -40,5 +45,26 @@ describe("fiveStarRate", () => {
       expect(rate).toBeGreaterThanOrEqual(previous);
       previous = rate;
     }
+  });
+});
+
+describe("featuredWinChance", () => {
+  it("is the configured chance when not guaranteed", () => {
+    // 50/50 style: a Wuthering Waves featured Resonator banner shape
+    expect(featuredWinChance(config, false)).toBe(config.featuredChance);
+  });
+
+  it("is certain when guaranteed", () => {
+    expect(featuredWinChance(config, true)).toBe(1);
+  });
+});
+
+describe("guaranteeAfterFiveStar", () => {
+  it("clears the guarantee after winning the 50/50", () => {
+    expect(guaranteeAfterFiveStar(true)).toBe(false);
+  });
+
+  it("sets the guarantee after losing the 50/50", () => {
+    expect(guaranteeAfterFiveStar(false)).toBe(true);
   });
 });

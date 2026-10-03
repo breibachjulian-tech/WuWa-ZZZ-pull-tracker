@@ -17,3 +17,16 @@ export function fiveStarRate(config: BannerConfig, pity: number): number {
   }
   return config.baseRate;
 }
+
+export interface PullState {
+  pity: number;
+  guaranteed: boolean;
+}
+
+export function featuredWinChance(config: BannerConfig, guaranteed: boolean): number {
+  return guaranteed ? 1 : config.featuredChance;
+}
+
+export function guaranteeAfterFiveStar(featured: boolean): boolean {
+  return !featured;
+}
